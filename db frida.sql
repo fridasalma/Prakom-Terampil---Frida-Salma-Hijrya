@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Mar 2023 pada 04.16
+-- Waktu pembuatan: 25 Mar 2023 pada 04.30
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -24,13 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `poli`
+-- Struktur dari tabel `pendaftaran`
 --
 
-CREATE TABLE `poli` (
-  `Kd Dokter` varchar(20) DEFAULT NULL,
-  `Nama Poli` varchar(20) DEFAULT NULL
+CREATE TABLE `pendaftaran` (
+  `NoRM` int(20) NOT NULL,
+  `TglReg` date DEFAULT NULL,
+  `Kdpoli` varchar(20) DEFAULT NULL,
+  `Kddokter` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `pendaftaran`
+--
+ALTER TABLE `pendaftaran`
+  ADD PRIMARY KEY (`NoRM`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `pendaftaran`
+--
+ALTER TABLE `pendaftaran`
+  MODIFY `NoRM` int(20) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
